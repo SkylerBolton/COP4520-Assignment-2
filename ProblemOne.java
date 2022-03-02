@@ -9,11 +9,12 @@ class Global
 	Only the leader will replace a cupcake (set cupcake to 1).
 	Once the leader has replaced it 100 times, everyone can be done.
 	*/
+
     public static int cupcake = 1;
-	public static int finished = 0;
-	public static int count = 0;
-	public static int headcount = 100;
-	public static Object mutex = new Object();
+    public static int finished = 0;
+    public static int count = 0;
+    public static int headcount = 100;
+    public static Object mutex = new Object();
 }
 
 class Guest implements Runnable
