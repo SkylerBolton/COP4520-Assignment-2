@@ -19,10 +19,12 @@ Problem 2:
 RUNNING:
 
 javac ProblemTwo.java
+
 java ProblemTwo
 
 OUTPUT:
 The queue will close in 5 seconds.
+
 Time's up!
 
 I have decided to use approach #3, a queue. 1 and 2 allow for cases where a guest may not get into the room for a very long time, if at all. This can occur even if a guest is the first one to try getting into the room. A queue guarentees a guest can eventually get in, before the guests that come along after. I use an array based lock queue to ensure this. Each guest will attempt to enter the showroom, and be placed in a queue array. When their position is set to true, they can acquire the lock and view the vase. After doing this, they will call unlock() and allow the next guest in the queue to acquire it.
